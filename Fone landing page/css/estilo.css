@@ -1,0 +1,268 @@
+/* 
+Vermelho: #ca3b3a
+Preto: #161616
+Cinza: #707070
+
+fonte:Montserrat
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    cursor: pointer;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo-principal{
+    max-width: 60px;
+}
+nav ul {
+    display: flex;  
+}
+nav a {
+    display: block;
+    font-size: 12px;
+    padding: 15px;
+    color: #161616;
+    font-weight: 600;
+}
+.elementos-menu img{
+    padding-left: 5px;
+}
+
+/* ANIMAÇÃO HEADER */
+
+.hover-line::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ca3b3a;
+    transition: .3;
+}
+.hover-line:hover:after {
+    width: 100%;
+    transition: .3s;
+}
+
+
+/* CONTEUDO */
+
+.barrinha {
+    width: 5px;
+    height: 50px;
+    background: #161616;
+}
+.container-geral {
+    max-width: 1000px;
+    margin: 90px  auto 0;
+    /* border: 1px solid red; */
+}
+.container-conteudo {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 50px  auto 0px;
+}
+.img-principal {
+    margin-top: 20px;
+}
+.img-principal img{
+    width: 300px;
+}
+.container-conteudo h2 {
+    color: #ca3b3a;
+    text-transform: uppercase;
+}
+.container-conteudo p {
+    margin: 15px 0 15px 0;
+    color: #161616;
+    font-weight: 800; 
+    font-size: 0.8em;
+}
+.container-conteudo .color-red {
+    color: #ca3b3a;
+    font-size: 12px;
+    font-weight: 800;
+    margin-left: 30px;
+    align-items: center;
+}
+.container-conteudo .color-opac {
+    color: rgba(22, 22, 22, 0.6);
+    font-weight: 600;
+    font-size: 0.8em;
+}
+.btn {
+    background: #ca3b3a;
+    padding: 13px 30px;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    margin-left: 50px;
+}
+.btn:hover {
+    background: #161616;
+}
+
+.preco {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* RODAPÉ */
+.footer-icones {
+    display: flex;
+    max-width: 570px;
+    gap: 30px;
+    /* border: 1px solid red; */
+}
+.footer-icones li {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.footer-icones img {
+    padding-right: 15px;
+}
+.footer-icones img:nth-child(1){
+    padding-right: 10px;
+}
+.footer-icones p {
+    line-height: 1.5em;
+}
+
+.footer-conteudo {
+    max-width: 995px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    background: #f9f7d6;
+    /* border: 1px solid red; */
+}
+footer {
+    display: flex;
+    margin: 150px 0 0 0;
+    font-size: 10px;
+}
+
+.barra1 {
+    width: 5px;
+    height: 50px;
+    margin-bottom: 20px;
+    position: absolute;
+    background: #e0e0e0;                 
+    border-radius: 5px;
+    margin: 0px  0px 130px -130px;
+}
+.barra1::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #ca3b3a;
+    border-radius: 50%;
+    margin: 100px 0 0 0;
+}
+
+.bola{
+    width: 7px;
+    height: 7px;
+    display: flex;
+    position: absolute;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 150px 0 0 -130px;
+}
+.barra2 {
+    width: 5px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin: 0  0 -420px -130px;
+}
+.barra2::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: -50px 0 0 0;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:600px) {
+    .container-geral{
+        margin: 0 auto;
+    }
+    .container-conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        padding: 10px;
+    }
+    nav {
+        display: none;
+    }
+    .footer-conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+    .bluetooth {
+        margin: 10px 0 10px;
+    }
+    .preco {
+        font-size:25px;
+    }
+    .btn {
+        margin-left: 2px;
+        padding: 10px 25px;
+    }
+    footer {
+        margin-top: 80px;
+    }
+    .footer-conteudo {
+        align-items: center;
+        margin: 0 20px 0 20px;
+        border-radius: 8px 8px 0 0;
+    }
+    .footer-icones {
+        display: flex;
+        flex-wrap: wrap;
+        width: 170px;
+        gap: 10px;
+    }
+    .barra1, .bola, .barra2 {
+        visibility: hidden;
+    }
+   
+}
