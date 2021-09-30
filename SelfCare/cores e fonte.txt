@@ -1,0 +1,12 @@
+Cores:
+
+Verde: #5CA720
+Preto: #161616
+Cinza (linhas divisórias): #A5A1A1
+Cinza (background do footer): #F9F9F9
+
+
+Fonte utilizada:
+
+Lato
+
